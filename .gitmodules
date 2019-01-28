@@ -1,0 +1,3 @@
+[submodule "recipe_repos/recipes"]
+	path = recipe_repos/recipes
+	url = https://github.com/autopkg/recipes
