@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>RECIPE_REPOS</key>
+	<dict>
+		<key>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes</key>
+		<dict>
+			<key>URL</key>
+			<string>https://github.com/autopkg/recipes</string>
+		</dict>
+	</dict>
+	<key>RECIPE_SEARCH_DIRS</key>
+	<array>
+		<string>.</string>
+		<string>~/Library/AutoPkg/Recipes</string>
+		<string>/Library/AutoPkg/Recipes</string>
+		<string>~/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes</string>
+	</array>
+</dict>
+</plist>
