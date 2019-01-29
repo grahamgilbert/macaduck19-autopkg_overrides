@@ -18,6 +18,7 @@ jobs:
       - run: mkdir -p ${HOME}/AutoPkg
       - run: ln -s recipe_repos ${HOME}/AutoPkg/RecipeRepos
       - run: ln -s recipe_overrides ${HOME}/AutoPkg/RecipeOverrides
+      - run: python runner.py
 
 workflows:
   version: 2
