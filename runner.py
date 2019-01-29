@@ -75,10 +75,6 @@ def get_process_children(pid):
     stdout, stderr = p.communicate()
     return [int(p) for p in stdout.split()]
 
-# commented out as currently using submodules
-#subprocess.call(['/usr/local/bin/autopkg', 'repo-update', 'all'])
-
-
 def create_pull_request(reponame, head, base, title, body, credentials):
     r = requests.post(
         'https://api.github.com/repos/' +
@@ -135,9 +131,7 @@ for recipe in recipes:
                              'force_rebuild=YES',
                              'MakeCatalogs.munki',
                              '-k',
-                             'MUNKI_REPO=' + munkirepo,
-                             '-k',
-                             'DISABLE_CODE_SIGNATURE_VERIFICATION=1'])
+                             'MUNKI_REPO=' + munkirepo])
 
             makebranch = True
 
