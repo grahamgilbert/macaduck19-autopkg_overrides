@@ -6,8 +6,8 @@ jobs:
     shell: /bin/bash --login -o pipefail
     steps:
       - checkout
-      - run: brew install git-lfs
       - run: pip install requests
+      - run: git clone https://grahamgilbert:${git_token}@github.com/grahamgilbert/macaduck19-munki_repo.git
 
 workflows:
   version: 2
