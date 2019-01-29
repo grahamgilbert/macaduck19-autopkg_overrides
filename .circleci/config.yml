@@ -17,6 +17,7 @@ jobs:
       - run: sudo installer -pkg autopkg-1.0.4.pkg -target /
       - run: mkdir -p ${HOME}/Library/AutoPkg
       - run: ln -s ${CIRCLE_WORKING_DIRECTORY}/recipe_repos ${HOME}/Library/AutoPkg/RecipeRepos
+      - run: ls -la ~/Library/AutoPkg
       - run: ln -s ${CIRCLE_WORKING_DIRECTORY}/recipe_overrides ${HOME}/Library/AutoPkg/RecipeOverrides
       - run: python runner.py
 
