@@ -9,7 +9,7 @@ import requests
 from json import dumps
 import sys
 
-munkirepo = os.path.join(os.environ("CIRCLE_WORKING_DIRECTORY"))
+munkirepo = os.path.join(os.environ("CIRCLE_WORKING_DIRECTORY"), "macaduck19-munki_repo")
 
 
 if os.path.isfile("/usr/local/bin/git"):
