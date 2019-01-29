@@ -1,5 +1,13 @@
 #!/usr/bin/python
 
+"""
+This script is horrible. It barely functions.
+
+
+But it does function.
+""""
+
+
 import subprocess
 import plistlib
 import tempfile
@@ -9,7 +17,7 @@ import requests
 from json import dumps
 import sys
 
-munkirepo = os.path.join(os.environ("CIRCLE_WORKING_DIRECTORY"), "macaduck19-munki_repo")
+munkirepo = os.path.join(os.environ["CIRCLE_WORKING_DIRECTORY"], "macaduck19-munki_repo")
 
 
 if os.path.isfile("/usr/local/bin/git"):
