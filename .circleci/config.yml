@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  setup:
+    macos:
+      xcode: "10.1.0"
+    shell: /bin/bash --login -o pipefail
+    steps:
+      - checkout
+      - run: brew install git-lfs
+      - run: pip install requests
+
+workflows:
+  version: 2
+  build-test:
+    jobs:
+      - setup
