@@ -114,6 +114,8 @@ for recipe in recipes:
 
     reportplist = plistlib.readPlist(plist)
     print(reportplist)
+    print ['/usr/local/bin/autopkg', 'run', recipe,
+               '--report-plist', plist, '-k', 'MUNKI_REPO=' + munkirepo]
     try:
         if 'munki_importer_summary_result' in reportplist['summary_results']:
             report = reportplist['summary_results'][
