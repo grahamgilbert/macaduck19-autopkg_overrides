@@ -94,7 +94,7 @@ def create_pull_request(reponame, head, base, title, body, credentials):
     return r.json()
 
 
-credentials = ('grahamgilbert', os.environ("github_api"))
+credentials = ('grahamgilbert', os.environ["github_api"])
 repo = 'grahamgilbert/macaduck19-munki_repo'
 
 # just for my sanity
