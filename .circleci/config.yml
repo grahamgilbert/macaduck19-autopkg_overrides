@@ -16,8 +16,8 @@ jobs:
       - run: curl -OL https://github.com/autopkg/autopkg/releases/download/v1.0.4/autopkg-1.0.4.pkg
       - run: sudo installer -pkg autopkg-1.0.4.pkg -target /
       - run: mkdir -p ${HOME}/Library/AutoPkg
-      - run: ln -s recipe_repos ${HOME}/Library/AutoPkg/RecipeRepos
-      - run: ln -s recipe_overrides ${HOME}/Library/AutoPkg/RecipeOverrides
+      - run: ln -s ${CIRCLE_WORKING_DIRECTORY}/recipe_repos ${HOME}/Library/AutoPkg/RecipeRepos
+      - run: ln -s ${CIRCLE_WORKING_DIRECTORY}/recipe_overrides ${HOME}/Library/AutoPkg/RecipeOverrides
       - run: python runner.py
 
 workflows:
