@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: pip install requests
-      - run: git clone https://grahamgilbert:${git_token}@github.com/grahamgilbert/macaduck19-munki_repo.git
+      - run: git clone https://grahamgilbert:${github_api}@github.com/grahamgilbert/macaduck19-munki_repo.git
 
 workflows:
   version: 2
