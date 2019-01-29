@@ -113,7 +113,7 @@ for recipe in recipes:
     print run(['/usr/sbin/diskutil', 'eject', '/dev/disk2'], timeout=10)[1]
 
     reportplist = plistlib.readPlist(plist)
-
+    print(reportplist)
     try:
         if 'munki_importer_summary_result' in reportplist['summary_results']:
             report = reportplist['summary_results'][
