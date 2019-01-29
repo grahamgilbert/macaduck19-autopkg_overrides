@@ -15,6 +15,8 @@ jobs:
       - run: git clone https://grahamgilbert:${github_api}@github.com/grahamgilbert/macaduck19-munki_repo.git ${HOME}/macaduck19-munki_repo
       - run: curl -OL https://github.com/autopkg/autopkg/releases/download/v1.0.4/autopkg-1.0.4.pkg
       - run: sudo installer -pkg autopkg-1.0.4.pkg -target /
+      - run: curl -OL https://github.com/munki/munki/releases/download/v3.5.2/munkitools-3.5.2.3637.pkg
+      - run: sudo installer -pkg munkitools-3.5.2.3637.pkg -target /
       - run: mkdir -p ~/Library/AutoPkg
       - run: cp -r recipe_repos ~/Library/AutoPkg/RecipeRepos
       - run: cp -r recipe_overrides ~/Library/AutoPkg/RecipeOverrides
