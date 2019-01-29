@@ -113,9 +113,11 @@ for recipe in recipes:
     print run(['/usr/sbin/diskutil', 'eject', '/dev/disk2'], timeout=10)[1]
 
     reportplist = plistlib.readPlist(plist)
-    print(reportplist)
-    print ['/usr/local/bin/autopkg', 'run', recipe,
-               '--report-plist', plist, '-k', 'MUNKI_REPO=' + munkirepo]
+    if 'failures' in reportplist:
+        if len(reportplist['failures']) > 0:
+            print reportplist
+            print "Failure occurred, exiting."
+            sys.exit(1)
     try:
         if 'munki_importer_summary_result' in reportplist['summary_results']:
             report = reportplist['summary_results'][
