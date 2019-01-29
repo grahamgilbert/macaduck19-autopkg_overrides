@@ -18,7 +18,7 @@ jobs:
       - run: mkdir -p ~/Library/AutoPkg
       - run: cp -r recipe_repos ~/Library/AutoPkg/RecipeRepos
       - run: cp -r recipe_overrides ~/Library/AutoPkg/RecipeOverrides
-      - run: ls -la /Library/AutoPkg/RecipeOverrides
+      - run: ls -la ~/Library/AutoPkg/RecipeOverrides
       - run: python runner.py
 
 workflows:
