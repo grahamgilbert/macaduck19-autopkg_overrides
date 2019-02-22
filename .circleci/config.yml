@@ -28,14 +28,14 @@ workflows:
   commit:
     jobs:
       - setup_and_run
-
-  schedule:
-    triggers:
-      - schedule:
-          cron: "0 * * * *"
-          filters:
-            branches:
-              only:
-                - master
-    jobs:
-      - setup_and_run
+  # The below is commented out so we can run on demand for the demo
+  # schedule:
+  #   triggers:
+  #     - schedule:
+  #         cron: "0 * * * *"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
+  #   jobs:
+  #     - setup_and_run
